@@ -17,4 +17,4 @@ declare module '*.svg' {
 }
 
 
-declare module "@metomic/alias";
+declare module "@metomic/alias-core";

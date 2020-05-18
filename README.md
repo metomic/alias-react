@@ -1,13 +1,13 @@
-# @metomic/react-alias
+# @metomic/alias-react
 
 > Use metomic alias with your react application
 
-[![NPM](https://img.shields.io/npm/v/@metomic/react-alias.svg)](https://www.npmjs.com/package/@metomic/react-alias) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@metomic/alias-react.svg)](https://www.npmjs.com/package/@metomic/alias-react)
 
 ## Install
 
 ```bash
-npm install --save @metomic/react-alias
+yarn add @metomic/alias-react
 ```
 
 ## Usage
@@ -15,15 +15,12 @@ npm install --save @metomic/react-alias
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from '@metomic/react-alias'
-import '@metomic/react-alias/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
 }
+
 ```
+
+
 
 ## License
 

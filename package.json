@@ -1,10 +1,10 @@
 {
-  "name": "@metomic/react-alias",
+  "name": "@metomic/alias-react",
   "version": "0.1.0",
   "description": "Use metomic Alias with your react application",
   "author": "metomic",
   "license": "MIT",
-  "repository": "metomic/react-alias",
+  "repository": "metomic/alias-react",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
