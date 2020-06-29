@@ -12,7 +12,7 @@
     "node": ">=10"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
+    "@metomic:registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "scripts": {
