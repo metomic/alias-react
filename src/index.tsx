@@ -79,44 +79,48 @@ export const useAlias = ({ purpose }: AliasHookParams) => {
   })
 
   React.useLayoutEffect(() => {
-    const input = ref.current as HTMLInputElement
-    overlayRef.current = Alias.dom.createOverlayController(input)
-    securingContextRef.current = Alias.dom.createSecuringContext(
-      appId,
-      purpose,
-      input,
-      (state: any) => {
-        const overlay = overlayRef.current as any
-        switch (state.status) {
-          case 'loading':
-            overlay.setActive(true)
-            setState({ active: true, error: undefined })
-            break
-          case 'complete':
-            overlay.setActive(false)
-            setState({ active: true, error: undefined })
-            setNativeValue(input, state.result)
-            break
-          case 'error':
-            overlay.setActive(false)
-            setState({ active: false, error: state.error.message })
-            break
-          case 'reset':
-            overlay.setActive(false)
-            setState({ active: false, error: undefined })
-            setNativeValue(input, state.result)
-            break
-          default:
+    if (ref.current) {
+      const input = ref.current as HTMLInputElement
+      overlayRef.current = Alias.dom.createOverlayController(input)
+      securingContextRef.current = Alias.dom.createSecuringContext(
+        appId,
+        purpose,
+        input,
+        (state: any) => {
+          const overlay = overlayRef.current as any
+          switch (state.status) {
+            case 'loading':
+              overlay.setActive(true)
+              setState({ active: true, error: undefined })
+              break
+            case 'complete':
+              overlay.setActive(false)
+              setState({ active: true, error: undefined })
+              setNativeValue(input, state.result)
+              break
+            case 'error':
+              overlay.setActive(false)
+              setState({ active: false, error: state.error.message })
+              break
+            case 'reset':
+              overlay.setActive(false)
+              setState({ active: false, error: undefined })
+              setNativeValue(input, state.result)
+              break
+            default:
+          }
         }
-      }
-    )
-  }, [])
+      )
+    }
+  }, [ref])
 
   const toggleSecure = () => {
-    const securingContext = securingContextRef?.current as any
-    securingContext
-      .doToggle(!state.active)
-      .catch((e: Error) => console.error(e))
+    if (securingContextRef.current) {
+      const securingContext = securingContextRef.current as any
+      securingContext
+        .doToggle(!state.active)
+        .catch((e: Error) => console.error(e))
+    }
   }
 
   return {
