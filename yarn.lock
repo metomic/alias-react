@@ -1252,6 +1252,11 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
+"@metomic/alias-core@^0.1.0":
+  version "0.1.0"
+  resolved "https://code.metomic.io:4873/@metomic%2falias-core/-/alias-core-0.1.0.tgz#48209d7d085e77d0e6cab41fc6426894614e24d5"
+  integrity sha512-mYKHYHd/7bTWFSGXVN2OaIA5NefaRpbB/EoAPhn6lrlIZi3P45ucxj/DXdeHf0MVVxmsDAWqosri9cXs+9YOCA==
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
