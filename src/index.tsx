@@ -17,7 +17,7 @@ export const AliasToggle = ({ onToggle }: AliasToggleProps) => {
     })
   }, [onToggle])
 
-  return ref.current
+  return <div ref={ref} />
 }
 
 type AliasContext = {
