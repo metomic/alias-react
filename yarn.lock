@@ -1252,10 +1252,12 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@metomic/alias-core@^0.1.0":
-  version "0.1.0"
-  resolved "https://code.metomic.io:4873/@metomic%2falias-core/-/alias-core-0.1.0.tgz#48209d7d085e77d0e6cab41fc6426894614e24d5"
-  integrity sha512-mYKHYHd/7bTWFSGXVN2OaIA5NefaRpbB/EoAPhn6lrlIZi3P45ucxj/DXdeHf0MVVxmsDAWqosri9cXs+9YOCA==
+"@metomic/alias-core@^0.2.0":
+  version "0.2.0"
+  resolved "https://code.metomic.io:4873/@metomic%2falias-core/-/alias-core-0.2.0.tgz#59286eed1e038fc54d891859ea2b2d3ce3bffc43"
+  integrity sha512-JuSCxikQ0bVl++OsckhEH5QHI4HgCfmQTbimcYlmlbqJD9M4Cc1oweHJ3i98Tlk+ICZ7MR2vEYhz4SJaQpA08g==
+  dependencies:
+    svelte "^3.0.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -10557,6 +10559,11 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   integrity sha512-oRSIpR8pxT1Wr2FquTNnGet79b3BWljqOuoW/h4oBhxJ/HUbX5nX6JSruTkvXDCFMwDPvsaTTbvMLKZWSy0R5g==
   dependencies:
     has-flag "^4.0.0"
+
+svelte@^3.0.0:
+  version "3.23.2"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.23.2.tgz#f3e500384261a2e77b29681ee744c3c790fbcdc3"
+  integrity sha512-hE8GeTM83YVR4GY6/6PeDEcGct4JS5aCi+IYbCAa76oaPSfuF7L85DQYULQxlTK/KPWzw3L1GRGmC3oPG/PQoA==
 
 svg-parser@^2.0.0:
   version "2.0.4"
