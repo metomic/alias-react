@@ -1,6 +1,6 @@
 {
   "name": "@metomic/alias-react",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Use metomic Alias with your react application",
   "author": "metomic",
   "license": "MIT",
