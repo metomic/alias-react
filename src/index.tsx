@@ -8,13 +8,18 @@ type AliasToggleProps = {
 
 export const AliasToggle = ({ onToggle, ...restProps }: AliasToggleProps) => {
   const ref = React.useRef<HTMLDivElement>(null)
+  const toggleRef = React.useRef<any>();
 
   React.useLayoutEffect(() => {
-    // eslint-disable-next-line no-new
-    new Alias.AliasToggle({
-      target: ref.current,
-      props: { onToggle }
-    })
+    if (toggleRef.current) {
+      toggleRef.current.$set({ onToggle })
+    } else {
+      // eslint-disable-next-line no-new
+      toggleRef.current = new Alias.AliasToggle({
+        target: ref.current,
+        props: { onToggle }
+      })
+    }
   }, [onToggle])
 
   return <div ref={ref} {...restProps} />
@@ -117,16 +122,14 @@ export const useAlias = ({ purpose }: AliasHookParams) => {
   const toggleSecure = React.useCallback(() => {
     if (securingContextRef.current) {
       const securingContext = securingContextRef.current as any
-      return securingContext
-        .doToggle(!state.active)
-        .catch((e: Error) => {
-          console.error(e)
-          throw e
-        })
+      return securingContext.doToggle(!state.active).catch((e: Error) => {
+        console.error(e)
+        throw e
+      })
     } else {
       return Promise.reject(new Error('no securingcontextref'))
     }
-  }, [securingContextRef])
+  }, [securingContextRef, state])
 
   return {
     ref,
