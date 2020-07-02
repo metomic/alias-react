@@ -7,7 +7,7 @@ type AliasToggleProps = {
 }
 
 export const AliasToggle = ({ onToggle, ...restProps }: AliasToggleProps) => {
-  const ref = React.useRef(document.createElement('div'))
+  const ref = React.useRef<HTMLDivElement>(null)
 
   React.useLayoutEffect(() => {
     // eslint-disable-next-line no-new
@@ -68,7 +68,7 @@ export const useAlias = ({ purpose }: AliasHookParams) => {
   }
 
   const { appId } = context
- 
+
   const ref = React.useRef<HTMLInputElement>(null)
   const overlayRef = React.useRef(null)
   const securingContextRef = React.useRef(null)
