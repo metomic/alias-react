@@ -6,7 +6,7 @@ type AliasToggleProps = {
   onToggle: () => Promise<any>
 }
 
-export const AliasToggle = ({ onToggle }: AliasToggleProps) => {
+export const AliasToggle = ({ onToggle, ...restProps }: AliasToggleProps) => {
   const ref = React.useRef(document.createElement('div'))
 
   React.useLayoutEffect(() => {
@@ -17,7 +17,7 @@ export const AliasToggle = ({ onToggle }: AliasToggleProps) => {
     })
   }, [onToggle])
 
-  return <div ref={ref} />
+  return <div ref={ref} {...restProps} />
 }
 
 type AliasContext = {
