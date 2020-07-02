@@ -1252,10 +1252,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^3.0.0"
 
-"@metomic/alias-core@^0.2.0":
-  version "0.2.0"
-  resolved "https://code.metomic.io:4873/@metomic%2falias-core/-/alias-core-0.2.0.tgz#59286eed1e038fc54d891859ea2b2d3ce3bffc43"
-  integrity sha512-JuSCxikQ0bVl++OsckhEH5QHI4HgCfmQTbimcYlmlbqJD9M4Cc1oweHJ3i98Tlk+ICZ7MR2vEYhz4SJaQpA08g==
+"@metomic/alias-core@^0.3.0":
+  version "0.3.0"
+  resolved "https://code.metomic.io:4873/@metomic%2falias-core/-/alias-core-0.3.0.tgz#7bb27fe68a3bf32a94469335baf66d345e26558c"
+  integrity sha512-r9Duqj6C1NPqGguLtok6bxs4ks6+pm+yttNAZLtKdlu7OSWqofeoE0omoj9HCMtWbRG989voXpOkMJV/UXJI3g==
   dependencies:
     svelte "^3.0.0"
 
