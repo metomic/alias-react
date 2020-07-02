@@ -41,7 +41,7 @@ const MySignupBox = () => {
       <input ref={ref}>
       
       {/* Finally, set up a toggle to control whether or not the mail address is secured */}
-      <AliasToggle onChange={toggleAlias} />
+      <AliasToggle onChange={toggleSecured} />
     </div>
   )
 
