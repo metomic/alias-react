@@ -114,14 +114,19 @@ export const useAlias = ({ purpose }: AliasHookParams) => {
     }
   }, [ref])
 
-  const toggleSecure = () => {
+  const toggleSecure = React.useCallback(() => {
     if (securingContextRef.current) {
       const securingContext = securingContextRef.current as any
-      securingContext
+      return securingContext
         .doToggle(!state.active)
-        .catch((e: Error) => console.error(e))
+        .catch((e: Error) => {
+          console.error(e)
+          throw e
+        })
+    } else {
+      return Promise.reject(new Error('no securingcontextref'))
     }
-  }
+  }, [securingContextRef])
 
   return {
     ref,
