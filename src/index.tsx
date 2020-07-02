@@ -3,7 +3,7 @@ import * as React from 'react'
 import * as Alias from '@metomic/alias-core'
 
 type AliasToggleProps = {
-  onToggle: () => {}
+  onToggle: () => Promise<any>
 }
 
 export const AliasToggle = ({ onToggle }: AliasToggleProps) => {
@@ -26,7 +26,7 @@ type AliasContext = {
 const AliasContext = React.createContext<AliasContext | undefined>(undefined)
 
 type AliasHookResult = {
-  toggleSecure: () => {}
+  toggleSecure: () => Promise<any>
   isActive: boolean
   ref: React.Ref<HTMLInputElement>
   error?: string
